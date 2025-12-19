@@ -2,30 +2,52 @@
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
-    <title>Mano MP3 Atsisiuntėjas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemokamas YouTube į MP3 Konverteris</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
-        input[type="text"] { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
-        button { background-color: #ff0000; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px; background-color: #f0f2f5; color: #333; }
+        .container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 20px auto; }
+        input[type="text"] { width: 70%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; outline: none; }
+        input[type="text"]:focus { border-color: #ff0000; }
+        button { background-color: #ff0000; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: bold; transition: background 0.3s; }
         button:hover { background-color: #cc0000; }
-        h1 { color: #333; }
+        h1 { color: #222; margin-bottom: 10px; }
+        .ad-space { width: 100%; height: 100px; background-color: #eee; margin: 20px 0; display: flex; align-items: center; justify-content: center; border: 1px dashed #ccc; color: #888; }
+        .coffee-btn { display: inline-block; background-color: #FFDD00; color: #000; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold; margin-top: 20px; border: 2px solid #000; }
+        .footer { margin-top: 40px; font-size: 12px; color: #888; }
     </style>
 </head>
 <body>
+
+    <div class="ad-space">
+        Reklamos vieta (Čia kapsės centai)
+    </div>
+
     <div class="container">
-        <h1>YouTube į MP3</h1>
-        <p>Įklijuok nuorodą ir gauk failą nemokamai.</p>
+        <h1>🎵 YouTube į MP3</h1>
+        <p>Greičiausias būdas atsisiųsti muziką be registracijos.</p>
         
         <form method="POST">
-            <input type="text" name="url" placeholder="Pvz: https://www.youtube.com/watch?v=..." required>
-            <br>
-            <button type="submit">Atsisiųsti</button>
+            <input type="text" name="url" placeholder="Įklijuok YouTube nuorodą čia..." required>
+            <button type="submit">Atsisiųsti MP3</button>
         </form>
 
         {% if message %}
-            <p style="color: red;">{{ message }}</p>
+            <p style="color: #d9534f; margin-top: 15px;">{{ message }}</p>
         {% endif %}
+
+        <a href="https://www.buymeacoffee.com/" target="_blank" class="coffee-btn">
+            ☕ Nupirk man kavos (Paremk projektą)
+        </a>
     </div>
+
+    <div class="ad-space">
+        Reklamos vieta #2
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Tavo Projektas. Naudoti tik asmeniniais tikslais.</p>
+    </div>
+
 </body>
 </html>
